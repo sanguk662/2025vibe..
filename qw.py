@@ -72,7 +72,7 @@ def show_tasks(title, filter_fn):
                 st.session_state.todos = [
                     t for t in st.session_state.todos if t.get("id") != task_id
                 ]
-                st.experimental_rerun()
+                st.rerun()
 
             updated_todos.append({**item, "done": done})
         else:
